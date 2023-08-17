@@ -265,6 +265,49 @@
       </div>
     </div>
   </nav>
+    <!-- New stock information section -->
+  <section class="stock-section">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stock Quote</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Twitter</td>
+          <td><span class="stock-quote" data-symbol="TWTR"></span></td>
+        </tr>
+        <tr>
+          <td>Facebook</td>
+          <td><span class="stock-quote" data-symbol="FB"></span></td>
+        </tr>
+        <tr>
+          <td>Google</td>
+          <td><span class="stock-quote" data-symbol="GOOGL"></span></td>
+        </tr>
+        <tr>
+          <td>Netflix</td>
+          <td><span class="stock-quote" data-symbol="NTFLX"></span></td>
+        </tr>
+        <tr>
+          <td>Yahoo</td>
+          <td><span class="stock-quote" data-symbol="YHOO"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    $(document).ready(function() {
+      $('.stock-quote').stockQuotes();
+    });
+  </script>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 <section class="skills animate__animated animate__fadeInUp">
   <div class="container">
     <h2>My Technical Skills</h2>
