@@ -208,33 +208,38 @@
       max-width: 100%;
       height: auto;
     }
-    .welcome-section {
+.welcome-section {
   background: url('369F6944-47DE-43A5-B7DA-1D0FA738666A.jpeg') no-repeat center center;
   background-size: cover;
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: flex-end; /* Align text to the bottom */
   justify-content: center; /* Center horizontally */
   color: #ffffff; /* White text color */
   font-size: 3rem; /* Text size */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
   overflow: hidden; /* Hide overflow for scrolling effect */
+  perspective: 1000px; /* Perspective for 3D effect */
 }
 
 .welcome-section h1 {
+  position: absolute; /* Absolute position for 3D transformation */
+  bottom: 0; /* Position at the bottom */
   animation: welcomeScroll 10s linear infinite; /* 10 seconds for full scroll */
+  transform-origin: 50% 100%; /* Transformation origin for 3D effect */
   white-space: nowrap; /* Keep text in one line */
 }
 
 @keyframes welcomeScroll {
   0% {
-    transform: translateX(100%); /* Start from the right */
+    transform: translateZ(0); /* Start from the original position */
   }
   100% {
-    transform: translateX(-100%); /* Scroll to the left */
+    transform: translateZ(-500px); /* Move into the distance */
   }
 }
+
 
   </style>
 </head>
