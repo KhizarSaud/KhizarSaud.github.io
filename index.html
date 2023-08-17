@@ -120,68 +120,42 @@
       }
     }
 
-    .experience {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 50px 0;
-      text-align: center;
-    }
+/* Existing CSS for the experience section */
 
-    .experience h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+.experience {
+  background-color: #f8f9fc;
+  padding: 50px 0;
+  text-align: center;
+}
 
-    .experience .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+.experience h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-    .experience .col-md-4 {
-      flex: 0 0 calc(33.33% - 20px);
-      margin-bottom: 20px;
-    }
+.experience .card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Indicates clickable */
+  transition: all 0.3s ease-in-out;
+}
 
-    .experience .card {
-      background-color: #f8f9fc;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-    }
+.experience .card:hover {
+  transform: translateY(-10px);
+}
 
-    .experience .card:hover {
-      transform: translateY(-10px);
-    }
+.experience .card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px;
+}
 
-    .experience .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .experience .card-text {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .experience .card-link {
-      color: #4e73df;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .experience .card-link:hover {
-      color: #2e59d9;
-    }
-
+.experience .card-footer {
+  font-size: 1.2rem;
+  padding: 10px;
+}
     .card {
       border: 1px solid #ddd;
       border-radius: 5px;
@@ -301,75 +275,73 @@
   </section>
 
   <!-- Work Experience Section -->
-  <section class="experience">
-    <div class="container">
-      <h2>My Work Experience</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Software Engineer Intern
-            </div>
-            <div class="card-body">
-              <p>Cisco Systems, Inc.</p>
-              <p>June 2021 - August 2021</p>
-              <a href="#" class="card-link">Learn More</a>
-            </div>
-          </div>
+<section class="experience">
+  <div class="container">
+    <h2>My Work Experience</h2>
+    <div class="row">
+      <!-- Experience Card 1 -->
+      <div class="col-md-3">
+        <div class="card" data-toggle="modal" data-target="#modalID1">
+          <div class="card-header">Software Engineer Intern</div>
+          <div class="card-footer">June 2021 - August 2021</div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Software Engineer Intern
-            </div>
-            <div class="card-body">
-              <p>Cisco Systems</p>
-              <p>June 2023 - Present</p>
-              <p>San Jose, California</p>
-              <ul>
-                <li>Engineered a Full Stack Dashboard for Chaos Engineering...</li>
-                <li>Advanced Analytics and Data Visualization...</li>
-                <li>Automated Device-Side Trigger Creation with PyATS...</li>
-              </ul>
-            </div>
-          </div>
+      </div>
+      <!-- Experience Card 2 -->
+      <div class="col-md-3">
+        <div class="card" data-toggle="modal" data-target="#modalID2">
+          <div class="card-header">Software Engineer Intern</div>
+          <div class="card-footer">June 2023 - Present</div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Software Engineer Intern
-            </div>
-            <div class="card-body">
-              <p>Cisco Systems</p>
-              <p>June 2022 - Sept. 2023</p>
-              <p>San Jose, California</p>
-              <ul>
-                <li>Developed a Holistic Log File Analyzer...</li>
-                <li>Advanced File Processing Capabilities...</li>
-                <li>Enhanced User Experience and Efficiency...</li>
-              </ul>
-            </div>
-          </div>
+      </div>
+      <!-- Experience Card 3 -->
+      <div class="col-md-3">
+        <div class="card" data-toggle="modal" data-target="#modalID3">
+          <div class="card-header">Software Engineer Intern</div>
+          <div class="card-footer">June 2022 - Sept. 2023</div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Owner and Operator
-            </div>
-            <div class="card-body">
-              <p>CellPhone Ventures LLC</p>
-              <p>Jan 2015 - Current</p>
-              <ul>
-                <li>Comprehensive Technical Expertise...</li>
-                <li>Strategic Customer Engagement...</li>
-                <li>End-to-End Operations Management...</li>
-              </ul>
-            </div>
-          </div>
+      </div>
+      <!-- Experience Card 4 -->
+      <div class="col-md-3">
+        <div class="card" data-toggle="modal" data-target="#modalID4">
+          <div class="card-header">Owner and Operator</div>
+          <div class="card-footer">Jan 2015 - Current</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Modal for Experience 1 -->
+<div class="modal fade" id="modalID1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Software Engineer Intern - Cisco Systems, Inc.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Detailed information about experience 1...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Experience 2 -->
+<div class="modal fade" id="modalID2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Same structure as above, update content -->
+</div>
+<!-- Modal for Experience 3 -->
+<div class="modal fade" id="modalID3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Same structure as above, update content -->
+</div>
+<!-- Modal for Experience 4 -->
+<div class="modal fade" id="modalID4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Same structure as above, update content -->
+</div>
 
   <!-- Footer Section -->
   <footer class="footer">
