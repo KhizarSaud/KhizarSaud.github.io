@@ -52,9 +52,13 @@
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
+      margin-right: 20px;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
+    }
+
+    .skills .card:last-child {
+      margin-right: 0;
     }
 
     .skills .card:hover {
@@ -137,9 +141,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .experience .col-md-4 {
+      flex: 0 0 calc(33.33% - 20px);
       margin-bottom: 20px;
     }
 
@@ -207,7 +214,7 @@
     }
 
     .col-md-4 {
-      flex: 0 0 32%;
+      flex: 0 0 calc(33.33% - 20px);
     }
   </style>
 </head>
