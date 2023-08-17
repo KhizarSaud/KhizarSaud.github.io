@@ -187,6 +187,38 @@
     .experience .card-link:hover {
       color: #2e59d9;
     }
+    /* Add your CSS styling here */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  flex: 0 0 32%;
+}
+
   </style>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -279,86 +311,91 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>My Work Experience</title>
+</head>
+<body>
   <section class="experience">
     <div class="container">
       <h2>My Work Experience</h2>
       <div class="row">
-        <!-- Add more information about your work experience and projects here -->
-        <!-- Example -->
-        <div class="col-md-4 animate__animated animate__fadeInUp">
+        <div class="col-md-4">
+          <!-- Experience Card 1 -->
           <div class="card">
+            <div class="card-header">
+              Software Engineer Intern
+            </div>
             <div class="card-body">
-              <h4 class="card-title">Software Engineer Intern</h4>
-              <p class="card-text">Cisco Systems, Inc.</p>
-              <p class="card-text">June 2021 - August 2021</p>
+              <p>Cisco Systems, Inc.</p>
+              <p>June 2021 - August 2021</p>
               <a href="#" class="card-link">Learn More</a>
             </div>
           </div>
         </div>
-<div class="col-md-4 animate__animated animate__fadeInUp">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Software Engineer Intern<br>June 2023 - Present<br>Cisco Systems, San Jose, California
-        </button>
-      </h5>
-    </div>
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        <!-- Details about the job -->
-        <ul>
-          <li>Engineered a Full Stack Dashboard for Chaos Engineering...</li>
-          <li>Advanced Analytics and Data Visualization...</li>
-          <li>Automated Device-Side Trigger Creation with PyATS...</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Software Engineer Intern<br>June 2022 - Sept. 2023<br>Cisco Systems, San Jose, California
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        <!-- Details about the job -->
-        <ul>
-          <li>Developed a Holistic Log File Analyzer...</li>
-          <li>Advanced File Processing Capabilities...</li>
-          <li>Enhanced User Experience and Efficiency...</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Owner and Operator<br>Jan 2015 - Current<br>CellPhone Ventures LLC
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        <!-- Details about the job -->
-        <ul>
-          <li>Comprehensive Technical Expertise...</li>
-          <li>Strategic Customer Engagement...</li>
-          <li>End-to-End Operations Management...</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
+        <div class="col-md-4">
+          <!-- Experience Card 2 -->
+          <div class="card">
+            <div class="card-header">
+              Software Engineer Intern
+            </div>
+            <div class="card-body">
+              <p>Cisco Systems</p>
+              <p>June 2023 - Present</p>
+              <p>San Jose, California</p>
+              <ul>
+                <li>Engineered a Full Stack Dashboard for Chaos Engineering...</li>
+                <li>Advanced Analytics and Data Visualization...</li>
+                <li>Automated Device-Side Trigger Creation with PyATS...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Experience Card 3 -->
+          <div class="card">
+            <div class="card-header">
+              Software Engineer Intern
+            </div>
+            <div class="card-body">
+              <p>Cisco Systems</p>
+              <p>June 2022 - Sept. 2023</p>
+              <p>San Jose, California</p>
+              <ul>
+                <li>Developed a Holistic Log File Analyzer...</li>
+                <li>Advanced File Processing Capabilities...</li>
+                <li>Enhanced User Experience and Efficiency...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Experience Card 4 -->
+          <div class="card">
+            <div class="card-header">
+              Owner and Operator
+            </div>
+            <div class="card-body">
+              <p>CellPhone Ventures LLC</p>
+              <p>Jan 2015 - Current</p>
+              <ul>
+                <li>Comprehensive Technical Expertise...</li>
+                <li>Strategic Customer Engagement...</li>
+                <li>End-to-End Operations Management...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+</body>
+</html>
+
 
   <!-- Footer Section -->
   <footer class="footer">
