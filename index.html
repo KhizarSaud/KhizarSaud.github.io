@@ -2,142 +2,315 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <!-- Custom CSS -->
-    <style>
-        /* Your custom CSS styles go here */
-        /* ... existing styles ... */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- Custom CSS -->
+  <style>
+    /* Your custom CSS styles go here */
+    body {
+      background-color: #f8f9fc;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-        .resume-section {
-            background-color: #f8f9fc;
-            padding: 50px 0;
-            text-align: center;
-        }
+    .navbar {
+      background-color: #343a40;
+    }
 
-        .resume-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-        .resume-section .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    .hero {
+      background-color: #4e73df;
+      color: #ffffff;
+      padding: 50px 0;
+    }
 
-        .resume-section .card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-        .resume-section .card-header {
-            font-size: 1.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 20px;
-            background-color: #4e73df;
-            color: #ffffff;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
 
-        .resume-section .card-body {
-            display: none;
-            padding: 20px;
-        }
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
 
-        /* ... other styles ... */
-    </style>
-    <!-- Bootstrap CSS -->
-    <!-- ... other includes ... -->
+    .skills {
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
+      color: #ffffff;
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .skills .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .skills .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .skills h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .skills .card-body {
+      padding: 20px;
+    }
+
+    .skills .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .skills .card-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills .card-list li {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+    }
+
+    .footer p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .animate__animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .animate__fadeInUp {
+      animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .experience {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .experience h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .experience .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .experience .col-md-4 {
+      margin-bottom: 20px;
+    }
+
+    .experience .card {
+      background-color: #f8f9fc;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .experience .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .experience .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .experience .card-text {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .experience .card-link {
+      color: #4e73df;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .experience .card-link:hover {
+      color: #2e59d9;
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
 
 <body>
-    <!-- ... other sections ... -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">About Me</a>
+    </div>
+  </nav>
 
-    <!-- Resume Section -->
-    <section class="resume-section">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="row">
-                <!-- Education -->
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card">
-                        <div class="card-header" onclick="toggleCardBody(this)">Rutgers University</div>
-                        <div class="card-body">
-                            <p>Bachelor of Science in Computer Science</p>
-                            <p>New Brunswick, NJ</p>
-                            <p>Jan. 2021 - Dec. 2023</p>
-                        </div>
-                    </div>
-                </div>
+  <!-- Skills Section -->
+  <section class="skills animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2>My Technical Skills</h2>
+      <div class="row">
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Languages & Paradigms</h4>
+              <ul class="card-list">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>SQL</li>
+                <li>Functional Programming</li>
+                <li>OOP</li>
+              </ul>
             </div>
-            <h2>Experience</h2>
-            <div class="row">
-                <!-- Experience -->
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card">
-                        <div class="card-header" onclick="toggleCardBody(this)">Software Engineer Intern - Cisco
-                            Systems</div>
-                        <div class="card-body">
-                            <p>San Jose, California</p>
-                            <p>June 2023 - Present</p>
-                            <p>Details about the role, achievements, etc.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- ... other experiences ... -->
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card">
-                        <div class="card-header" onclick="toggleCardBody(this)">Owner and Operator - CellPhone
-                            Ventures LIC</div>
-                        <div class="card-body">
-                            <p>Jan 2015 - Current</p>
-                            <p>Comprehensive Technical Expertise, Strategic Customer Engagement, End-to-End Operations
-                                Management</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Frameworks & Libraries</h4>
+              <ul class="card-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Flask</li>
+                <li>Express.js</li>
+                <li>jQuery</li>
+                <li>Spring Boot</li>
+                <li>TensorFlow</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Projects and Technical Skills -->
-    <section class="resume-section">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Pizza Ordering App | Java, Android Studio</p>
-            <p>Developed a user-friendly Pizza ordering app using Java and Android Studio</p>
-            <!-- ... other projects ... -->
-            <h2>Technical Skills</h2>
-            <p>Languages: Java, Python, SQL, JavaScript, HTML</p>
-            <p>Frameworks: React, Node.js, Flask, JUnit, Pytest</p>
-            <p>Developer Tools: Git, Dockers, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</p>
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Tools & Technologies</h4>
+              <ul class="card-list">
+                <li>MongoDB</li>
+                <li>Git</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Linux</li>
+                <li>Kubernetes</li>
+                <li>CI/CD Pipelines</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer Section -->
-    <!-- ... footer ... -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 animate__animated animate__fadeInLeft">
+          <h1>Welcome to My GitHub Page!</h1>
+          <p>Hi, I'm Khizar Saud, a senior at Rutgers University. I'm a software engineer with experience in Python, React, JavaScript, Node.js, Flask, Java, MongoDB, Git, and Docker.</p>
+          <p>I also have a passion for entrepreneurship and have successfully built my own business - a cellphone repair shop from the ground up.</p>
+          <p>Throughout my journey, I have had the opportunity to complete internships at Cisco, where I honed my skills and gained valuable industry experience.</p>
+        </div>
 
-    <!-- Bootstrap JS -->
-    <!-- ... other includes ... -->
+        <div class="col-md-6 animate__animated animate__fadeInRight">
+          <img src="91D605DE-93D0-441C-81BA-60F18165DCAC.png" alt="Background Image">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function toggleCardBody(element) {
-            const cardBody = element.nextElementSibling;
-            if (cardBody.style.display === "none" || cardBody.style.display === "") {
-                cardBody.style.display = "block";
-            } else {
-                cardBody.style.display = "none";
-            }
-        }
-    </script>
+  <!-- Experience Section -->
+  <section class="experience">
+    <div class="container">
+      <h2>My Work Experience</h2>
+      <div class="row">
+        <!-- Add more information about your work experience and projects here -->
+        <!-- Example -->
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Software Engineer Intern</h4>
+              <p class="card-text">Cisco Systems, Inc.</p>
+              <p class="card-text">June 2021 - August 2021</p>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2022 Khizar Saud</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
