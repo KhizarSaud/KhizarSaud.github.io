@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
-  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
-    /* Your custom CSS styles go here */
     body {
       background-color: #f8f9fc;
       font-family: 'Open Sans', sans-serif;
@@ -40,18 +40,10 @@
       margin-bottom: 20px;
     }
 
-    .hero img {
-      width: 100%;
-      height: auto;
-    }
-
     .skills {
       background: linear-gradient(135deg, #2980b9, #6dd5fa);
       color: #ffffff;
       padding: 50px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-align: center;
       font-weight: bold;
     }
@@ -122,7 +114,6 @@
         opacity: 0;
         transform: translate3d(0, 100%, 0);
       }
-
       to {
         opacity: 1;
         transform: none;
@@ -187,45 +178,38 @@
     .experience .card-link:hover {
       color: #2e59d9;
     }
-    /* Add your CSS styling here */
-.card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.card-header {
-  background-color: #f5f5f5;
-  padding: 10px;
-  font-weight: bold;
-}
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-.card-body {
-  padding: 15px;
-}
+    .card-header {
+      background-color: #f5f5f5;
+      padding: 10px;
+      font-weight: bold;
+    }
 
-.card-link {
-  color: #007bff;
-  text-decoration: none;
-}
+    .card-body {
+      padding: 15px;
+    }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-}
+    .card-link {
+      color: #007bff;
+      text-decoration: none;
+    }
 
-.col-md-4 {
-  flex: 0 0 32%;
-}
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
 
+    .col-md-4 {
+      flex: 0 0 32%;
+    }
   </style>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
 
 <body>
@@ -303,7 +287,6 @@
           <p>I also have a passion for entrepreneurship and have successfully built my own business - a cellphone repair shop from the ground up.</p>
           <p>Throughout my journey, I have had the opportunity to complete internships at Cisco, where I honed my skills and gained valuable industry experience.</p>
         </div>
-
         <div class="col-md-6 animate__animated animate__fadeInRight">
           <img src="91D605DE-93D0-441C-81BA-60F18165DCAC.png" alt="Background Image">
         </div>
@@ -311,21 +294,12 @@
     </div>
   </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>My Work Experience</title>
-</head>
-<body>
+  <!-- Work Experience Section -->
   <section class="experience">
     <div class="container">
       <h2>My Work Experience</h2>
       <div class="row">
         <div class="col-md-4">
-          <!-- Experience Card 1 -->
           <div class="card">
             <div class="card-header">
               Software Engineer Intern
@@ -338,7 +312,6 @@
           </div>
         </div>
         <div class="col-md-4">
-          <!-- Experience Card 2 -->
           <div class="card">
             <div class="card-header">
               Software Engineer Intern
@@ -356,7 +329,6 @@
           </div>
         </div>
         <div class="col-md-4">
-          <!-- Experience Card 3 -->
           <div class="card">
             <div class="card-header">
               Software Engineer Intern
@@ -374,7 +346,6 @@
           </div>
         </div>
         <div class="col-md-4">
-          <!-- Experience Card 4 -->
           <div class="card">
             <div class="card-header">
               Owner and Operator
@@ -393,9 +364,6 @@
       </div>
     </div>
   </section>
-</body>
-</html>
-
 
   <!-- Footer Section -->
   <footer class="footer">
