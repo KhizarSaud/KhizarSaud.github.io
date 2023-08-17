@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 767px) {
+  .experience .row {
+    justify-content: center;
+  }
+
+  .experience .col-md-3 {
+    flex: 0 0 calc(100% - 20px); /* Full width on small screens */
+    margin-bottom: 15px;
+  }
+
+  .modal-dialog {
+    max-width: 90%; /* Allows for some margin on the sides */
+  }
+}
     body {
       background-color: #f8f9fc;
       font-family: 'Open Sans', sans-serif;
