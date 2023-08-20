@@ -17,24 +17,6 @@ body {
   font-weight: bold;
 }
 
-/* Fancy Buttons */
-.btn {
-  background-color: #4e73df;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #375aa6;
-}
-
 .hero {
   background-color: #4e73df;
   color: #ffffff;
@@ -90,7 +72,7 @@ body {
 }
 
 .skills .card-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
   white-space: nowrap;
@@ -112,7 +94,6 @@ body {
 
 .footer {
   background-color: #343a40;
-
   color: #ffffff;
   padding: 20px 0;
 }
@@ -135,6 +116,7 @@ body {
 .welcome-section .overlay {
   position: absolute;
   top: 0;
+
   left: 0;
   width: 100%;
   height: 100%;
@@ -232,7 +214,6 @@ body {
 
 .row {
   display: flex;
-
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -258,6 +239,7 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
+
     transform: translate3d(0, 100%, 0);
   }
   to {
@@ -265,16 +247,9 @@ body {
     transform: none;
   }
 }
-
-/* Mobile Responsive Adjustments */
 @media only screen and (max-width: 767px) {
-  .experience .row {
-    justify-content: center;
-  }
-
-  .experience .col-md-4 {
-    flex: 0 0 100%;
-    margin-bottom: 15px;
+  .skills .card {
+    margin: 0;
   }
 
   .modal-dialog {
