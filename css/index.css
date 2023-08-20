@@ -235,6 +235,9 @@ body {
 .animate__fadeInUp {
   animation-name: fadeInUp;
 }
+.hide {
+  opacity: 0;
+}
 
 @keyframes fadeInUp {
   from {
