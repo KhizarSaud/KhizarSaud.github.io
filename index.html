@@ -13,28 +13,62 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="/css/index.css" />
+    <style>
+      /* Add custom styles for the loading page */
+      .loading-page {
+        /* Set the background color, image, or any other desired styles */
+        background-color: #f8f9fa;
+      }
+
+      /* Center the loading animation */
+      .loading-page .loading-animation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
-  <body>
-    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/pdf/Kizs.pdf">Resume</a>
-        </li>
-      </ul>
+  <body class="loading-page">
+    <div class="loading-animation animate__animated animate__fadeIn">
+      <h1>Loading...</h1>
+      <img src="/images/load.gif" alt="Loading Animation" />
     </div>
-  </div>
-</nav>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            &#9776;
+            <!-- Unicode for hamburger icon -->
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="pdf/Kizs.pdf">Resume</a>
+          </div>
+        </div>
+        <a class="navbar-brand mx-auto text-center" href="#"></a>
+      </div>
+    </nav>
     <section class="welcome-section">
       <div class="overlay"></div>
       <div class="content">
-        <h1>Hi all! I'm Khizar Saud,</h1>
-        <p>A passionate Full Stack Software Developer 🚀 .</p>
+        <h1>Hello! I'm Khizar Saud.</h1>
+        <p>
+          <span>|</span>
+
+          <span>Undergraduate</span>
+          <span>|</span>
+          <span>Software Engineer</span>
+          <span>|</span>
+        </p>
 
         <a href="#next-section" class="more-button">More</a>
       </div>
@@ -46,22 +80,275 @@
             <div class="col-md-6 animate__animated animate__fadeInLeft">
               <!-- Text content goes here -->
               <p>
-              I've been on quite an exciting journey so far! As a senior at Rutgers University, I've had the privilege of diving into the world of software engineering. Along the way, I've gained valuable experience working with an array of technologies, including Python, React, JavaScript, Node.js, Flask, Java, MongoDB, Git, and Docker. These languages and tools have allowed me to build some amazing projects and tackle various challenges.
-
-Beyond my technical expertise, I've also fostered a deep passion for entrepreneurship. I'm proud to say that I've successfully established and grown my very own business, a cellphone repair shop. This experience has given me valuable insights into the world of business operations and customer engagement.
-
-To complement my academic journey, I've had the incredible opportunity to complete internships at Cisco, where I further refined my skills and gained practical industry experience. These internships provided me with real-world exposure, allowing me to work on impactful projects and contribute to the success of the company.
-
-Overall, my journey has been a remarkable one, filled with growth, learning, and a genuine love for the world of software engineering and entrepreneurship. I'm eager to continue expanding my knowledge and skills, taking on new challenges, and making a positive impact in the industry.
-
-Let me know if you have any questions or if there's anything specific you'd like to know more about!
+                Hi, I'm Khizar Saud, a senior at Rutgers University. I'm a
+                software engineer with experience in Python, React, JavaScript,
+                Node.js, Flask, Java, MongoDB, Git, and Docker. I also have a
+                passion for entrepreneurship and have successfully built my own
+                business - a cellphone repair shop from the ground up.
+                Throughout my journey, I have had the opportunity to complete
+                internships at Cisco, where I honed my skills and gained
+                valuable industry experience.
               </p>
             </div>
-         
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+              <!-- Image goes here -->
+              <img
+                src="images/91D605DE-93D0-441C-81BA-60F18165DCAC.png"
+                alt="Background Image"
+              />
+            </div>
           </div>
         </div>
       </section>
-    
+      <section class="skills animate__animated animate__fadeInUp">
+        <div class="container">
+          <h2>My Technical Skills</h2>
+          <div class="row">
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Languages</h4>
+                  <ul class="card-list programming-languages">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Frameworks & Libraries</h4>
+                  <ul class="card-list frameworks-and-libraries">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Flask</li>
+                    <li>Express.js</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Tools & Technologies</h4>
+                  <ul class="card-list tools-and-technologies">
+                    <li>MongoDB</li>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>Linux</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+     <!-- Work Experience Section -->
+    <section class="experience">
+      <div class="container">
+        <h2 class="text-center">My Work Experience</h2>
+        <div class="row justify-content-center">
+          <!-- Experience Card 1 -->
+          <div class="col-md-3 d-flex justify-content-center">
+            <div class="card" data-toggle="modal" data-target="#modalID1">
+              <div class="card-header">Software Engineer Intern</div>
+              <div class="card-footer">June 2023 - Present</div>
+            </div>
+          </div>
+          <!-- Experience Card 2 -->
+          <div class="col-md-3 d-flex justify-content-center">
+            <div class="card" data-toggle="modal" data-target="#modalID2">
+              <div class="card-header">Software Engineer Intern</div>
+              <div class="card-footer">June 2022 - Sept. 2023</div>
+            </div>
+          </div>
+          <!-- Experience Card 3 -->
+          <div class="col-md-3 d-flex justify-content-center">
+            <div class="card" data-toggle="modal" data-target="#modalID3">
+              <div class="card-header">Owner and Operator</div>
+              <div class="card-footer">Jan 2015 - Current</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Experience 1 -->
+    <div
+      class="modal fade"
+      id="modalID1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Software Engineer Intern - Cisco Systems, Inc.
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Worked on developing software solutions at Cisco Systems, Inc.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Experience 2 -->
+    <div
+      class="modal fade"
+      id="modalID2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Software Engineer Intern - Cisco Systems
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Currently working on various projects, including Full Stack
+              Development, at Cisco Systems.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Experience 3 -->
+    <div
+      class="modal fade"
+      id="modalID3"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Software Engineer Intern - Cisco Systems
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Sorry about the abrupt cut-off! Here's the rest of the corrected
+              version of the index.html file: Worked on developing a Log File
+              Analyzer and enhanced user experience at Cisco Systems.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Experience 4 -->
+    <div
+      class="modal fade"
+      id="modalID4"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Owner and Operator - CellPhone Ventures LLC
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Managed all operations, including technical expertise and customer
+              engagement, at CellPhone Ventures LLC.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -69,6 +356,21 @@ Let me know if you have any questions or if there's anything specific you'd like
         <p>&copy; 2022 Khizar Saud</p>
       </div>
     </footer>
+
+    <!-- Include Spin.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js"></script>
+    <script>
+      // After the page finishes loading, hide the loading animation
+      window.addEventListener("load", function () {
+        var loadingAnimation = document.querySelector(".loading-animation");
+        loadingAnimation.style.display = "none";
+        document.body.classList.remove("loading-page");
+      });
+
+      // Create Spin.js instance
+      var loader = new Spinner().spin();
+      document.getElementById("spin-loader").appendChild(loader.el);
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
