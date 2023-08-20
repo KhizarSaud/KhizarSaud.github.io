@@ -13,26 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="/css/index.css" />
-    <style>
-      /* Add custom styles for the loading page */
-      .loading-page {
-        /* Set the background color, image, or any other desired styles */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f8f9fa;
-      }
-
-      /* Center the loading animation */
-      .loading-page .loading-animation {
-        text-align: center;
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -51,7 +31,7 @@
             <!-- Unicode for hamburger icon -->
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="pdf/Kizs.pdf">Resume</a>
+            <a class="dropdown-item" href="PDF/Kizs.pdf">Resume</a>
           </div>
         </div>
         <a class="navbar-brand mx-auto text-center" href="#"></a>
@@ -126,7 +106,7 @@
                     <li>React</li>
                     <li>Node.js</li>
                     <li>Flask</li>
-                    <li>Express.js</li>
+                    <li>Pandas</li>
                   </ul>
                 </div>
               </div>
@@ -151,25 +131,32 @@
     <!-- Work Experience Section -->
     <section class="experience">
       <div class="container">
-        <h2 class="text-center">My Work Experience</h2>
-        <div class="row justify-content-center">
+        <h2>My Work Experience</h2>
+        <div class="row">
           <!-- Experience Card 1 -->
-          <div class="col-md-3 d-flex justify-content-center">
+          <div class="col-md-3">
             <div class="card" data-toggle="modal" data-target="#modalID1">
+              <div class="card-header">Software Engineer Intern</div>
+              <div class="card-footer">June 2021 - August 2021</div>
+            </div>
+          </div>
+          <!-- Experience Card 2 -->
+          <div class="col-md-3">
+            <div class="card" data-toggle="modal" data-target="#modalID2">
               <div class="card-header">Software Engineer Intern</div>
               <div class="card-footer">June 2023 - Present</div>
             </div>
           </div>
-          <!-- Experience Card 2 -->
-          <div class="col-md-3 d-flex justify-content-center">
-            <div class="card" data-toggle="modal" data-target="#modalID2">
+          <!-- Experience Card 3 -->
+          <div class="col-md-3">
+            <div class="card" data-toggle="modal" data-target="#modalID3">
               <div class="card-header">Software Engineer Intern</div>
               <div class="card-footer">June 2022 - Sept. 2023</div>
             </div>
           </div>
-          <!-- Experience Card 3 -->
-          <div class="col-md-3 d-flex justify-content-center">
-            <div class="card" data-toggle="modal" data-target="#modalID3">
+          <!-- Experience Card 4 -->
+          <div class="col-md-3">
+            <div class="card" data-toggle="modal" data-target="#modalID4">
               <div class="card-header">Owner and Operator</div>
               <div class="card-footer">Jan 2015 - Current</div>
             </div>
@@ -353,24 +340,9 @@
     <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2023 Khizar Saud</p>
+        <p>&copy; 2022 Khizar Saud</p>
       </div>
     </footer>
-
-    <!-- Include Spin.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js"></script>
-    <script>
-      // After the page finishes loading, hide the loading animation
-      window.addEventListener("load", function () {
-        var loadingAnimation = document.querySelector(".loading-animation");
-        loadingAnimation.style.display = "none";
-        document.body.classList.remove("loading-page");
-      });
-
-      // Create Spin.js instance
-      var loader = new Spinner().spin();
-      document.getElementById("spin-loader").appendChild(loader.el);
-    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
