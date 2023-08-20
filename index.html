@@ -15,6 +15,284 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
+    <div id="loading-screen">
+      <canvas id="matrix-rain-canvas"></canvas>
+      <div id="loading-text"></div>
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("loading-screen").style.display = "flex";
+
+        // Get the canvas element
+        const canvas = document.getElementById("matrix-rain-canvas");
+
+        // Set the canvas size to match the window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Get the 2D context
+        const context = canvas.getContext("2d");
+
+        // Initialize the matrix rain effect
+        function initMatrixRain() {
+          const columns = Math.floor(canvas.width / 20); // Number of columns based on canvas width
+
+          // Initialize an array of characters to be used in the matrix rain effect
+          const characters = [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+          ];
+
+          // Initialize the matrix columns with random characters
+          const matrix = [];
+          for (let i = 0; i < columns; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < 20; j++) {
+              matrix[i][j] =
+                characters[Math.floor(Math.random() * characters.length)];
+            }
+          }
+
+          // Animation loop
+          function animate() {
+            // Draw the black background
+            context.fillStyle = "rgba(0, 0, 0, 0.1)";
+            context.fillRect(0, 0, canvas.width, canvas.height, canvas.length);
+
+            // Draw the matrix rain characters
+            context.fillStyle = "#0F0"; // Green color
+
+            // Calculate the font size based on the canvas dimensions
+            const fontSize = 50;
+
+            // Set the font size and family
+            context.font = `${fontSize}px monospace`;
+
+            for (let i = 0; i < columns; i++) {
+              for (let j = 0; j < matrix[i].length; j++) {
+                // Calculate the position of each character
+                const x = i * fontSize;
+                const y = j * fontSize;
+
+                // Draw the matrix character
+                context.fillText(matrix[i][j], x, y);
+                context.fillText(matrix[i][j], x, y);
+                context.fillText(matrix[i][j], x, y);
+
+                context.fillText(matrix[i][j], x, y);
+
+                // Randomly change the matrix characters
+                if (Math.random() < 0.05) {
+                  matrix[i][j] =
+                    characters[Math.floor(Math.random() * characters.length)];
+                }
+              }
+            }
+
+            // Call the animate function again on the next frame
+            requestAnimationFrame(animate);
+          }
+
+          // Start the animation loop
+          animate();
+        }
+
+        // Initialize the matrix rain effect after a brief delay
+        setTimeout(function () {
+          initMatrixRain();
+
+          // Hide the loading screen after another 2 seconds
+          setTimeout(function () {
+            document.getElementById("loading-screen").style.display = "none";
+          }, 4000);
+        }, 1000);
+      });
+    </script>
+    <style></style>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
