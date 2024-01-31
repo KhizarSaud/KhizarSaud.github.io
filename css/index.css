@@ -293,48 +293,60 @@ body {
   color: #333; /* Change as needed */
 }
 
-/* Tooltip with flashing gradient and arrow */
+/* Swiper button styling */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper pagination bullet styling */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 1;
+}
+
+/* Swiper pagination bullet active styling */
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
+/* Tooltip with flashing gradient and arrow, centered below the swiper-slide */
 .swiper-tooltip {
-  display: none; /* Hide by default, shown by JavaScript when active */
-  position: absolute;
-  bottom: -50px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 16px;
+  text-align: center;
+  padding: 10px;
   border-radius: 5px;
-  background-image: linear-gradient(45deg, pink, green, red);
+  background-image: linear-gradient(to right, pink, green, red);
   color: white;
   font-weight: bold;
   animation: flashingGradient 3s infinite linear;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px; /* Adjust this value as needed to position the tooltip */
   white-space: nowrap;
-  z-index: 10;
 }
 
 .tooltip-arrow {
   content: '';
   position: absolute;
-  top: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(50%);
+  width: 0; 
+  height: 0; 
   border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
   border-left: 10px solid white;
 }
 
-/* Keyframes for the flashing gradient animation */
+/* Keyframes for flashing gradient animation */
 @keyframes flashingGradient {
-  0%, 100% {
-    background-image: linear-gradient(45deg, pink, green, red);
-  }
-  50% {
-    background-image: linear-gradient(45deg, red, pink, green);
-  }
-}
-
-/* Swiper slide active state */
-.swiper-slide-active .swiper-tooltip {
-  display: block; /* Only show the tooltip for the active slide */
+  0% { background-image: linear-gradient(to right, pink, green, red); }
+  50% { background-image: linear-gradient(to right, red, pink, green); }
+  100% { background-image: linear-gradient(to right, green, red, pink); }
 }
