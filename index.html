@@ -363,36 +363,42 @@ excellence in electronics repair.</li>
     <h2 class="text-center text-white mb-4">My Projects</h2>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <!-- Each project will be a swiper-slide -->
         <!-- Project 1 -->
-        <div class="swiper-slide">
+        <div class="swiper-slide" style="position: relative;">
           <div class="card mx-auto" style="width: 20rem;">
             <div class="card-body">
               <h5 class="card-title">FitTrack | Health Management Dashboard</h5>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fitTrackModal">Learn More</button>
             </div>
           </div>
+          <!-- Tooltip for swiping indication -->
+          <div class="swiper-tooltip">
+            <span class="tooltip-arrow"></span> Swipe for more projects
+          </div>
         </div>
         <!-- Project 2 -->
-        <div class="swiper-slide" style="position:relativel">
+        <div class="swiper-slide" style="position: relative;">
           <div class="card mx-auto" style="width: 20rem;">
             <div class="card-body">
               <h5 class="card-title">ClientEngage | Client Management Web Solution</h5>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clientEngageModal">Learn More</button>
             </div>
           </div>
+          <!-- Tooltip for swiping indication -->
+          <div class="swiper-tooltip">
+            <span class="tooltip-arrow"></span> Swipe for more projects
+          </div>
         </div>
       </div>
-      <!-- Add Arrows -->
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Navigation Arrows -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-    <!-- Tooltip for swiping indication -->
-    <div class="swiper-tooltip">
-      <span class="tooltip-arrow"></span> Swipe! for more projects
-    </div>
   </div>
 </section>
+
 
 
 <!-- Modals for Project Details -->
