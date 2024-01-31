@@ -292,61 +292,8 @@ body {
 .modal-content {
   color: #333; /* Change as needed */
 }
-
-/* Swiper button styling */
-.swiper-button-next, .swiper-button-prev {
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
 }
 
-/* Swiper pagination bullet styling */
-.swiper-pagination-bullet {
-  background: white;
-  opacity: 1;
-}
-
-/* Swiper pagination bullet active styling */
-.swiper-pagination-bullet-active {
-  background: #007bff;
-}
-/* Tooltip with flashing gradient and arrow, centered below the swiper-slide */
-.swiper-tooltip {
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, pink, green, red);
-  color: white;
-  font-weight: bold;
-  animation: flashingGradient 3s infinite linear;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -40px; /* Adjust this value as needed to position the tooltip */
-  white-space: nowrap;
-}
-
-.tooltip-arrow {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  transform: translateX(-50%) translateY(50%);
-  width: 0; 
-  height: 0; 
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
-  border-left: 10px solid white;
-}
-
-/* Keyframes for flashing gradient animation */
-@keyframes flashingGradient {
-  0% { background-image: linear-gradient(to right, pink, green, red); }
-  50% { background-image: linear-gradient(to right, red, pink, green); }
-  100% { background-image: linear-gradient(to right, green, red, pink); }
-}
