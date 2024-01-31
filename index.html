@@ -353,44 +353,99 @@ excellence in electronics repair.</li>
         </div>
       </div>
     </div>
+<!-- Add the link to Swiper's CSS in the <head> section of your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <!-- Projects Section -->
 <section class="projects my-5">
   <div class="container">
     <h2 class="section-title text-center mb-5">My Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-lg-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h4 class="card-title">FitTrack</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Product Owner</h6>
-            <a href="http://fittrack.hopto.org" target="_blank" class="card-link">fittrack.hopto.org</a>
-            <p class="card-text">Directing full-stack development through React and Python with Flask. Utilized JIRA and Confluence for sprint coordination, and implemented real-time health metric tracking as well as role-based access controls.</p>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Innovated user engagement features such as a custom chatbot trained on health data via OpenAI for fitness QA.</li>
-              <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Developed a FitTrack Gym Finder using the Google Maps API to locate the nearest gym to a user’s device location.</li>
-              <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Directed comprehensive testing and quality assurance with Jest, Pytest, and Selenium.</li>
-            </ul>
+    <!-- Card Slider -->
+    <div class="swiper-container">
+      <!-- Wrapper for slides -->
+      <div class="swiper-wrapper">
+        <!-- Single Slide -->
+        <div class="swiper-slide">
+          <div class="card mx-auto shadow-sm" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">FitTrack</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Product Owner</h6>
+              <a href="http://fittrack.hopto.org" target="_blank" class="card-link">fittrack.hopto.org</a>
+              <p class="card-text">Directing full-stack development through React and Python with Flask. Utilized JIRA and Confluence for sprint coordination, and implemented real-time health metric tracking as well as role-based access controls.</p>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Innovated user engagement features such as a custom chatbot trained on health data via OpenAI for fitness QA.</li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Developed a FitTrack Gym Finder using the Google Maps API to locate the nearest gym to a user’s device location.</li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Directed comprehensive testing and quality assurance with Jest, Pytest, and Selenium.</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <!-- Additional slides for other projects -->
       </div>
-      <!-- Project 2 -->
-      <div class="col-lg-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h4 class="card-title">ClientEngage</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Client Management Web Solution</h6>
-            <p class="card-text">Developed a web solution for automated client management using React.js and MongoDB, enhancing client information tracking and rent payment processing.</p>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Integrated automated reminders and financial reporting features, facilitating accurate and timely transactions.</li>
-              <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Enhanced the user interface for intuitive navigation and scalability.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- If you want to add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
+
+<!-- Add custom CSS to style the swiper container and navigation -->
+<style>
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+  }
+
+  .swiper-pagination-bullet {
+    background: #000;
+  }
+</style>
+
+<!-- Add Swiper's JS at the bottom of your HTML, before the closing </body> tag -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 
 
     <!-- Footer Section -->
@@ -418,5 +473,7 @@ excellence in electronics repair.</li>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
   </body>
 </html>
