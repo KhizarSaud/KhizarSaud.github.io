@@ -357,59 +357,76 @@ excellence in electronics repair.</li>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 
-<!-- Projects Section -->
-<section class="projects my-5">
-  <div class="container">
-    <!-- Blue header for Projects section -->
-    <div class="row">
-      <div class="col-12">
-        <div class="bg-primary text-center py-3 mb-4">
-          <h2 class="text-white m-0">My Projects</h2>
-        </div>
-      </div>
-    </div>
+<!-- Add Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-    <!-- Swiper Slider -->
+<!-- Projects Section -->
+<section class="projects-section py-5" id="projects">
+  <div class="container text-center">
+    <h2 class="text-center mb-5" style="color: #2c3e50;">My Projects</h2>
+    
+    <!-- Swiper -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
+
         <!-- Slide 1 -->
         <div class="swiper-slide">
-          <div class="card mx-auto shadow-sm" style="max-width: 18rem;">
-            <div class="card-body">
-              <h4 class="card-title">FitTrack</h4>
-              <!-- ... Rest of your content ... -->
-            </div>
-          </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fitTrackModal">
+            FitTrack | Health Management Dashboard
+          </button>
         </div>
+        
         <!-- Slide 2 -->
         <div class="swiper-slide">
-          <div class="card mx-auto shadow-sm" style="max-width: 18rem;">
-            <div class="card-body">
-              <h4 class="card-title">ClientEngage</h4>
-              <!-- ... Rest of your content ... -->
-            </div>
-          </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clientEngageModal">
+            ClientEngage | Client Management Web Solution
+          </button>
         </div>
+
+        <!-- Additional slides for other projects -->
+
       </div>
       <!-- Add navigation buttons -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <!-- Add pagination -->
-      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
-    /* Swiper Slider Customization */
-.swiper-container {
-  width: 100%;
-  margin-top: 2rem;
-}
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
+<!-- FitTrack Modal -->
+<div class="modal fade" id="fitTrackModal" tabindex="-1" aria-labelledby="fitTrackModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2c3e50; color: white;">
+        <h5 class="modal-title" id="fitTrackModalLabel">FitTrack | Health Management Dashboard</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- FitTrack Project Details Here -->
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- ClientEngage Modal -->
+<div class="modal fade" id="clientEngageModal" tabindex="-1" aria-labelledby="clientEngageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2c3e50; color: white;">
+        <h5 class="modal-title" id="clientEngageModalLabel">ClientEngage | Client Management Web Solution</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- ClientEngage Project Details Here -->
+      </div>
+    </div>
+  </div>
+</div>
+/* Swiper Navigation Button Customization */
 .swiper-button-next, .swiper-button-prev {
   color: #fff;
   background-color: #007bff;
@@ -421,33 +438,37 @@ excellence in electronics repair.</li>
   align-items: center;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #fff;
+/* Swiper Slide Customization */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- ... Your HTML content ... -->
+/* Button inside swiper slide */
+.swiper-slide .btn {
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: #fff;
+  background-color: #2c3e50; /* Match the header color */
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 20px; /* Space from the top */
+}
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
   });
 </script>
+
 
 
     <!-- Footer Section -->
