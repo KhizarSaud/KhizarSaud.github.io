@@ -356,96 +356,98 @@ excellence in electronics repair.</li>
 <!-- Add the link to Swiper's CSS in the <head> section of your HTML -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+
 <!-- Projects Section -->
 <section class="projects my-5">
   <div class="container">
-    <h2 class="section-title text-center mb-5">My Projects</h2>
-    <!-- Card Slider -->
+    <!-- Blue header for Projects section -->
+    <div class="row">
+      <div class="col-12">
+        <div class="bg-primary text-center py-3 mb-4">
+          <h2 class="text-white m-0">My Projects</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper Slider -->
     <div class="swiper-container">
-      <!-- Wrapper for slides -->
       <div class="swiper-wrapper">
-        <!-- Single Slide -->
+        <!-- Slide 1 -->
         <div class="swiper-slide">
-          <div class="card mx-auto shadow-sm" style="width: 18rem;">
+          <div class="card mx-auto shadow-sm" style="max-width: 18rem;">
             <div class="card-body">
               <h4 class="card-title">FitTrack</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Product Owner</h6>
-              <a href="http://fittrack.hopto.org" target="_blank" class="card-link">fittrack.hopto.org</a>
-              <p class="card-text">Directing full-stack development through React and Python with Flask. Utilized JIRA and Confluence for sprint coordination, and implemented real-time health metric tracking as well as role-based access controls.</p>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Innovated user engagement features such as a custom chatbot trained on health data via OpenAI for fitness QA.</li>
-                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Developed a FitTrack Gym Finder using the Google Maps API to locate the nearest gym to a user’s device location.</li>
-                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Directed comprehensive testing and quality assurance with Jest, Pytest, and Selenium.</li>
-              </ul>
+              <!-- ... Rest of your content ... -->
             </div>
           </div>
         </div>
-        <!-- Additional slides for other projects -->
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card mx-auto shadow-sm" style="max-width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">ClientEngage</h4>
+              <!-- ... Rest of your content ... -->
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- If you want to add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Navigation buttons -->
+      <!-- Add navigation buttons -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <!-- Add pagination -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
+    /* Swiper Slider Customization */
+.swiper-container {
+  width: 100%;
+  margin-top: 2rem;
+}
 
-<!-- Add custom CSS to style the swiper container and navigation -->
-<style>
-  .swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #000;
-  }
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .swiper-pagination-bullet {
-    background: #000;
-  }
-</style>
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
 
-<!-- Add Swiper's JS at the bottom of your HTML, before the closing </body> tag -->
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- ... Your HTML content ... -->
+
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 30,
-    keyboard: {
-      enabled: true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+    spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
   });
 </script>
-
 
 
     <!-- Footer Section -->
