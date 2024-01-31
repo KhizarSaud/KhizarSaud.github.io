@@ -51,6 +51,9 @@
                    <li class="nav-item">
                     <a class="nav-link" href="http://fittrack.hopto.org" target="_blank">FitTrack</a>
                 </li>
+                  <li class="nav-item">
+        <span id="visitorCount" class="nav-link">UserNumber: 0</span>
+      </li>
                 </ul>
             </div>
         </div>
@@ -390,7 +393,16 @@ excellence in electronics repair.</li>
       var loader = new Spinner().spin();
       document.getElementById("spin-loader").appendChild(loader.el);
     </script>
+<script>
+  const serverUrl = 'http://69.141.53.111:3000/increment-visitor-count';
 
+  fetch(serverUrl)
+    .then(response => response.text())
+    .then(count => {
+      document.getElementById('visitorCount').textContent = `UserNumber: ${count}`;
+    })
+    .catch(error => console.error('Error fetching visitor count:', error));
+</script>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
