@@ -394,22 +394,25 @@ excellence in electronics repair.</li>
       document.getElementById("spin-loader").appendChild(loader.el);
     </script>
 <script>
-  const serverUrl = 'http://69.141.53.111:3000/increment-visitor-count';
+const serverUrl = 'http://69.141.53.111:3000/increment-visitor-count';
+const visitorCountElement = document.getElementById('visitorCount');
 
-  // Function to fetch and update the visitor count
-  const fetchVisitorCount = () => {
-    fetch(serverUrl)
-      .then(response => response.text())
-      .then(count => {
-        document.getElementById('visitorCount').textContent = `UserNumber: ${count}`;
-      })
-      .catch(error => console.error('Error fetching visitor count:', error));
-  };
+// Function to fetch and update the visitor count
+const fetchVisitorCount = () => {
+  fetch(serverUrl)
+    .then(response => response.json())
+    .then(data => {
+      const count = data.count;
+      visitorCountElement.textContent = `UserNumber: ${count}`;
+    })
+    .catch(error => console.error('Error fetching visitor count:', error));
+};
 
-  // Call the function when the page finishes loading
-  window.addEventListener("load", () => {
-    fetchVisitorCount();
-  });
+// Call the function when the page finishes loading
+window.addEventListener("load", () => {
+  fetchVisitorCount();
+});
+
 </script>
 
     <!-- Bootstrap JS -->
