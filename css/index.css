@@ -281,3 +281,37 @@ body {
     max-width: 90%;
   }
 }
+/* Card styling */
+.project-card {
+  background-color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal content styling */
+.modal-content {
+  color: #333; /* Change as needed */
+}
+
+/* Swiper button styling */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper pagination bullet styling */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 1;
+}
+
+/* Swiper pagination bullet active styling */
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
