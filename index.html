@@ -396,13 +396,22 @@ excellence in electronics repair.</li>
 <script>
   const serverUrl = 'http://69.141.53.111:3000/increment-visitor-count';
 
-  fetch(serverUrl)
-    .then(response => response.text())
-    .then(count => {
-      document.getElementById('visitorCount').textContent = `UserNumber: ${count}`;
-    })
-    .catch(error => console.error('Error fetching visitor count:', error));
+  // Function to fetch and update the visitor count
+  const fetchVisitorCount = () => {
+    fetch(serverUrl)
+      .then(response => response.text())
+      .then(count => {
+        document.getElementById('visitorCount').textContent = `UserNumber: ${count}`;
+      })
+      .catch(error => console.error('Error fetching visitor count:', error));
+  };
+
+  // Call the function when the page finishes loading
+  window.addEventListener("load", () => {
+    fetchVisitorCount();
+  });
 </script>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
