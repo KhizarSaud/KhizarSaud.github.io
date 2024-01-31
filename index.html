@@ -468,36 +468,21 @@ excellence in electronics repair.</li>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-// Initialize Swiper
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  on: {
-    slideChange: function () {
-      // Hide all tooltips
-      var tooltips = document.querySelectorAll('.swiper-tooltip');
-      tooltips.forEach(function (tooltip) {
-        tooltip.style.display = 'none';
-      });
-      // Show only the active slide tooltip
-      var activeSlide = document.querySelector('.swiper-slide-active');
-      var tooltip = activeSlide.querySelector('.swiper-tooltip');
-      if (tooltip) {
-        tooltip.style.display = 'block';
-      }
-    }
-  }
-});
-
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true
+  });
+</script>
 
 <!-- Bootstrap's CSS and JS are also required for the modal functionality -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
